@@ -24,5 +24,17 @@ read from pin 11 and got value 1
 set pin 7 to 0
 read from pin 11 and got value 0
 
+examples(code storage):
+connect pin 7 to pin 11
+dwr2$1
+drd4$
+delay100$
+dwr2$0
+drd4$
+delay100$
+jump0
+
+run with run2
+
 future things and commands:
 user-made ZincScript code that can be run with the run command. [implemented]
