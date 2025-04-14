@@ -4,3 +4,7 @@ Screenshots:
 </p>
 ZincOS is a small OS for microcontrollers that uses ZincScript and ZincShell for it's CLI. You can code in Zinc script and run it by using the <code>append</code> command. Check <code>ZincScript documentation.txt</code> for more information about this.
 ZincOS uses MKernel to communicate with pins if commands like <code>dwr</code> are used.
+
+ZincOS was tested on:
+<strong>Arduino Uno R3</strong>
+<strong>NodeMCU V3</strong>
