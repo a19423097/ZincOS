@@ -25,7 +25,7 @@ delay1000$
 dwr13$0
 delay1000$
 )";
-char code2[512] = "";
+char code2[512] = {0};
 
 void linesInterpret(String code, char* mem1) {
 #ifdef HAS_TRIMMER
@@ -199,8 +199,8 @@ void interpret(String b, char* mem) {
 }
 
 void setup() {
-  Serial.begin(9600);
-  Serial.println("     == ZincShell v0.1| Zinc v0.1.5 ==");
+  Serial.begin(500000);
+  Serial.println("     == ZincShell v0.1| Zinc v0.1.3 ==");
   Serial.println("commands: pr, sav, clrmem, dwr, drd, delay, run, append\n");
   Serial.print("OK|");
 }
