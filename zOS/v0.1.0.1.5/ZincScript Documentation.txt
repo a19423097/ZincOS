@@ -13,6 +13,7 @@ append<str>@<memnum> append a string to a code storage variable.
 
 examples(shell):
 connect pin 7 to pin 11
+1.
 OK|dwr7$1
 OK|drd11$
 OK|dwr7$0
@@ -25,7 +26,7 @@ set pin 7 to 0
 read from pin 11 and got value 0
 
 examples(code storage):
-connect pin 7 to pin 11
+1.
 dwr2$1
 drd4$
 delay100$
@@ -33,6 +34,12 @@ dwr2$0
 drd4$
 delay100$
 jump0
+2.
+dwr13$1
+delay1000$
+dwr13$0
+delay1000$
+jump0$@2
 
 run with run2
 
