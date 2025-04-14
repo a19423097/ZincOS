@@ -6,5 +6,5 @@ ZincOS is a small OS for microcontrollers that uses ZincScript and ZincShell for
 ZincOS uses MKernel to communicate with pins if commands like <code>dwr</code> are used.
 
 ZincOS was tested on:
-<strong>Arduino Uno R3</strong><br>
+<br><strong>Arduino Uno R3</strong><br>
 <strong>NodeMCU V3</strong>
