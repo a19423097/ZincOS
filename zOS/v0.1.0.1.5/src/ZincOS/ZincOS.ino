@@ -25,7 +25,7 @@ delay1000$
 dwr13$0
 delay1000$
 )";
-char code2[200] = "";
+char code2[512] = "";
 
 void linesInterpret(String code, char* mem1) {
 #ifdef HAS_TRIMMER
