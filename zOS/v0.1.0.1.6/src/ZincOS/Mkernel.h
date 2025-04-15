@@ -16,9 +16,9 @@ struct Mkern {
     const int memSize = 50;
     for (int i = 0; i < size; i++) {
       if (i > memSize) {
-        Serial.println("KERNEL_PANIC: UNKOWN DATA MIGHT HAVE BEEN OVERWRITTEN/INVALID MEMORY SIZE");
+        Serial.println("KERNEL_PANIC: ATTEMPT TO WRITE PAST BUFFER. DATA MIGHT HAVE BEEN OVERWRITTEN.");
         if (ignorePanic) {
-          Serial.println("ignorePanic is TRUE. Skipping hard stop, but corruption may have occurred!");
+          Serial.println("ignorePanic is TRUE. skipping hard stop, but corruption may have occurred!");
           return;
         }
         Serial.println("THE SYSTEM HAS TO STOP TO AVOID CRASHES");
