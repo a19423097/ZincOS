@@ -17,6 +17,10 @@ struct Mkern {
     for (int i = 0; i < size; i++) {
       if (i > memSize) {
         Serial.println("KERNEL_PANIC: UNKOWN DATA MIGHT HAVE BEEN OVERWRITTEN/INVALID MEMORY SIZE");
+        if (ignorePanic) {
+          Serial.println("ignorePanic is TRUE. Skipping hard stop, but corruption may have occurred!");
+          return;
+        }
         Serial.println("THE SYSTEM HAS TO STOP TO AVOID CRASHES");
         Serial.print("reseting in:");
         Serial.print("3");
@@ -26,13 +30,9 @@ struct Mkern {
         Serial.println("1");
         dwr(13, 0);
         delay(2000);
-        if (ignorePanic) {
-          Serial.println("ignorePanic was true. returning to ZincShell");
-          return;
-        } else {
-          Serial.print("it does not look like the system has reset. connect pin 13 to RESET(Arduinos) or reset manually.");
-          while(1);
-        }
+
+        Serial.print("it does not look like the system has reset. connect pin 13 to RESET(Arduinos) or reset manually.");
+        while(1);
       }
       mem[i] = '\0';
     }
