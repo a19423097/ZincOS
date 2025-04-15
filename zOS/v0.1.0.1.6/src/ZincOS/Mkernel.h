@@ -30,7 +30,7 @@ struct Mkern {
           Serial.println("ignorePanic was true. returning to ZincShell");
           return;
         } else {
-          Serial.print("it does not look like the system has reset. connect pin 13 to RESET if your using an arduino Uno.");
+          Serial.print("it does not look like the system has reset. connect pin 13 to RESET(Arduinos) or reset manually.");
           while(1);
         }
       }
