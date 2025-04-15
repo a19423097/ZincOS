@@ -8,3 +8,5 @@ ZincOS uses MKernel to communicate with pins if commands like <code>dwr</code> a
 ZincOS was tested on:
 <br><strong>Arduino Uno R3</strong><br>
 <strong>NodeMCU V3</strong>
+
+Compile and upload with Arduino IDE
