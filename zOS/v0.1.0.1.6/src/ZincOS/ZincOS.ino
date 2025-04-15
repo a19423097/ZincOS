@@ -20,6 +20,11 @@ char readByte;
 String buffer = "";
 char memory[50];
 
+bool Mkern::ignorePanic;
+
+//kernel settings (do NOT change unless you know what you're doing)
+bool ignoreKernelPanic = false;
+
 const char* code = R"(dwr13$1
 delay1000$
 dwr13$0
@@ -93,15 +98,20 @@ void interpret(String b, char* mem) {
 
   } else if (b.startsWith("sav")) {
     #ifdef HAS_MKERNEL
-      Mkern::sav(memory, b.c_str() + 3, sizeof(memory));
-      Serial.println("saved string from \"" + b + "\".");
+      Mkern::sav(mem, b.c_str() + 3, 50); // skip "sav"
     #else
-      Serial.println("Mkern::sav not available.");
-    #endif
+      int i = 0;
+    while ((i + 2) < b.length() && b[i + 2] != '$' && i < 50) {
+      mem[i] = b[i + 2];
+      i++;
+    }
+  mem[i] = '\0';
+#endif
+  Serial.println("saved string from \"" + b + "\".");
 
 } else if (b.startsWith("clrmem")) {
   #ifdef HAS_MKERNEL
-  Mkern::clrmem(memory, sizeof(memory));
+  Mkern::clrmem(memory, 50);
   Serial.println("memory cleared.");
   #else
     Serial.println("Mkern::clrmem not available.");
@@ -200,6 +210,8 @@ void interpret(String b, char* mem) {
 }
 
 void setup() {
+  Mkern::dwr(13, 1);
+  Mkern::setup(ignoreKernelPanic);
   Serial.begin(9600);
   Serial.println("     == ZincShell v0.1| Zinc v0.1.3 ==");
   Serial.println("commands: pr, sav, clrmem, dwr, drd, delay, run, append\n");
