@@ -25,4 +25,7 @@ set pin 7 to 0
 read from pin 11 and got value 0
 
 future things and commands:
-user-made ZincScript code that can be run with the run command. [implemented]
+jump if equal command. example usage:
+drd13$
+ifeq<1>0$
+if digital read 13 = 1, jump to line 0
