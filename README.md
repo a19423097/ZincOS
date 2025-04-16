@@ -11,7 +11,7 @@ ZincOS was tested on:
 
 Compile and upload with Arduino IDE
 
-notes:
+note:<br>
 v0.1.0.1.6<br>
 first 0.1 is ZincShell version<br>
 0.1.6 is ZincScript version<br>
