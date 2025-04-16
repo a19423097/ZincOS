@@ -1,0 +1,5 @@
+ZincShell: v0.1
+ZincScript: v0.1.3
+Mkern: v0.1
+
+full version: 0.1.0.1.3.0.1
