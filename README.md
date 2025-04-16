@@ -12,9 +12,8 @@ ZincOS was tested on:
 Compile and upload with Arduino IDE
 
 notes:
-v0.1.0.1.6
-first 0.1 is ZincShell version
-0.1.6 is ZincScript version
-0.1.4 is Mkern version (not shown)
-
+v0.1.0.1.6<br>
+first 0.1 is ZincShell version<br>
+0.1.6 is ZincScript version<br>
+0.1.4 is Mkern version (not shown)<br><br>
 full version number is located in versions.txt in <code>zOS/[version]</code>
