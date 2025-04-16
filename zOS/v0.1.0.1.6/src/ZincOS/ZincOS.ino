@@ -210,7 +210,7 @@ void interpret(String b, char* mem) {
 }
 
 void setup() {
-  Mkern::dwr(13, 1);
+  Mkern::dwr(12, 1);
   Mkern::setup(ignoreKernelPanic);
   Serial.begin(9600);
   Serial.println("     == ZincShell v0.1| Zinc v0.1.3 ==");
