@@ -17,4 +17,4 @@ first 0.1 is ZincShell version
 0.1.6 is ZincScript version
 0.1.4 is Mkern version (not shown)
 
-full version number is located in versions.txt in zOS/<version>
+full version number is located in versions.txt in <code>zOS/[version]</code>
