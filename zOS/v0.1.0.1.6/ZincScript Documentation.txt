@@ -27,5 +27,7 @@ read from pin 11 and got value 0
 future things and commands:
 jump if equal command. example usage:
 drd13$
-ifeq<1>0$
-if digital read 13 = 1, jump to line 0
+ifeq1,0$
+delay1$
+jump2$
+if digital read 13 = 1, jump to line 0. if not, loop forever
