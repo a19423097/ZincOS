@@ -163,9 +163,9 @@ void interpret(String b, char* mem) {
 
   } else if (b.startsWith("run")) {
     if (b[3] == '1') {
-      linesInterpret(code, memory);
+      linesInterpret(String(code), memory);
     } else if (b[3] == '2') {
-      linesInterpret(code2, memory);
+      linesInterpret(String(code2), memory);
     } else {
       Serial.println("program" + String(b[3]) + " was not found");
     }
