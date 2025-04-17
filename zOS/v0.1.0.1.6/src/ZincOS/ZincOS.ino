@@ -213,7 +213,7 @@ void setup() {
   Mkern::dwr(12, 1);
   Mkern::setup(ignoreKernelPanic);
   Serial.begin(9600);
-  Serial.println("     == ZincShell v0.1| Zinc v0.1.3 ==");
+  Serial.println("     == ZincShell v0.1| Zinc v0.1.6 ==");
   Serial.println("commands: pr, sav, clrmem, dwr, drd, delay, run, append\n");
   Serial.print("OK|");
 }
