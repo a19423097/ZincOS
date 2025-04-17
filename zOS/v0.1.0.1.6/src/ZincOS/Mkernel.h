@@ -17,7 +17,7 @@ struct Mkern {
     const int memSize = 50;
     for (int i = 0; i < size; i++) {
       if (i > memSize) {
-        handleKernelPanic(); // Call the private function
+        handleKernelPanic();
         return;
       }
       mem[i] = '\0';
